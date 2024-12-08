@@ -1,4 +1,4 @@
-import { CardMenu } from "@/components/molecule/cardMenu";
+import { CardMenu } from "@/components/molecule";
 import { Container } from "@/components/ui";
 import { HeadingText } from "@/components/molecule";
 // import Login from "@/components/Auth/Login";
@@ -18,8 +18,13 @@ export default function Home() {
           contentAlign="START"
           textAlign="LEFT"
         />
-        <CardMenu title="Money Management" description="Manage your money spent daily" imageName="money" />
-        {/* <Login /> */}
+        <CardMenu
+          title="Money Management"
+          description="Manage your money spent daily"
+          imageName="money"
+          withQuestionTooltip
+          questionTooltipContent="Manage your money spent daily"
+        />
       </Container>
     </Container>
   );
