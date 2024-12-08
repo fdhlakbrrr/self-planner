@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 
-import { Card, CardDescription } from "../ui/card";
 import { AppImage } from "../ui/appImage";
 import { QuestionTooltip } from "./questionTooltip";
 import { Text } from "../ui";
+import { Card, CardDescription } from "../ui/card";
 
 interface Props {
   title: string;
