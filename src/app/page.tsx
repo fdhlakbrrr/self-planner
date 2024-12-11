@@ -5,7 +5,6 @@ import { HeadingText } from "@/components/molecule";
 // import { Text } from "@/components/ui/text";
 
 export default function Home() {
-  console.log("test")
   return (
     <Container customClass="p-0" align="CENTER">
       <Container
