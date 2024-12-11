@@ -1,34 +1,31 @@
-import type { ReactNode } from "react";
-
-import { AppImage } from "../ui/appImage";
+import { AppImage, Card, CardDescription } from "../ui";
+import type { MainMenu } from "@/types";
 import { QuestionTooltip } from "./questionTooltip";
 import { Text } from "../ui";
-import { Card, CardDescription } from "../ui/card";
 
 interface Props {
-  title: string;
-  imageName?: string | null;
-  description?: string;
-  withQuestionTooltip?: boolean;
-  questionTooltipContent?: string | ReactNode;
+  menuProps: MainMenu;
 }
 
-export const CardMenu = ({
-  title,
-  description,
-  imageName,
-  withQuestionTooltip,
-  questionTooltipContent,
-}: Props) => {
+export const CardMenu = ({ menuProps }: Props) => {
+  const {
+    title,
+    description,
+    icon,
+    withQuestionTooltip,
+    questionTooltipContent,
+    onClick,
+  } = menuProps;
+
   return (
-    <Card className="w-[300px] h-[80px] flex cursor-pointer shadow-sm transition-shadow hover:shadow-md relative">
+    <Card
+      className="w-[300px] h-[80px] flex cursor-pointer shadow-sm transition-shadow hover:shadow-md relative"
+      onClick={onClick}
+    >
       <div className="flex flex-row items-center gap-3 w-full p-3 box-border">
-        {imageName && <AppImage name={imageName} />}
+        {icon && <AppImage name={icon} />}
         <div className="text-left">
-          {/* <div className="flex gap-2 items-center"> */}
           <Text>{title}</Text>
-          {/* <QuestionTooltip /> */}
-          {/* </div> */}
           <CardDescription className="w-[200px] truncate">
             {description}
           </CardDescription>

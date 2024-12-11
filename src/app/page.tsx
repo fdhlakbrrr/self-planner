@@ -1,6 +1,6 @@
-import { CardMenu } from "@/components/molecule";
 import { Container } from "@/components/ui";
 import { HeadingText } from "@/components/molecule";
+import { MenuSection } from "@/components/molecule";
 // import Login from "@/components/Auth/Login";
 // import { Text } from "@/components/ui/text";
 
@@ -18,13 +18,7 @@ export default function Home() {
           contentAlign="START"
           textAlign="LEFT"
         />
-        <CardMenu
-          title="Money Management"
-          description="Manage your money spent daily"
-          imageName="money"
-          withQuestionTooltip
-          questionTooltipContent="Manage your money spent daily"
-        />
+        <MenuSection title="Main menu" />
       </Container>
     </Container>
   );
