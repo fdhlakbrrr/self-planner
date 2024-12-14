@@ -24,7 +24,7 @@ export const AppImage = ({ name, width = 50, height = 50 }: Props) => {
         />
       );
 
-    default:
-      return <></>;
+    // default:
+    //   return <></>;
   }
 };
