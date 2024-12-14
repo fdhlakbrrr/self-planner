@@ -9,9 +9,6 @@ interface Props {
 }
 
 export const AppImage = ({ name, width = 50, height = 50 }: Props) => {
-  if (!name) {
-    return undefined;
-  }
   switch (name) {
     case "money":
       return (
@@ -26,5 +23,8 @@ export const AppImage = ({ name, width = 50, height = 50 }: Props) => {
           height={height}
         />
       );
+
+    default:
+      return <></>;
   }
 };
