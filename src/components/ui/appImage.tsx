@@ -9,12 +9,22 @@ interface Props {
 }
 
 export const AppImage = ({ name, width = 50, height = 50 }: Props) => {
+  if (!name) {
+    return undefined;
+  }
   switch (name) {
     case "money":
       return (
         <Image alt="money plan" src={MoneyPlan} width={width} height={height} />
       );
     case "question-round":
-      return <Image alt="Question mark" src={QuestionRound} width={width} height={height} />
+      return (
+        <Image
+          alt="Question mark"
+          src={QuestionRound}
+          width={width}
+          height={height}
+        />
+      );
   }
 };
