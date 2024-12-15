@@ -1,3 +1,5 @@
+"use client";
+
 import { prefixPath } from "@/utils";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
@@ -28,11 +30,14 @@ export const usePrefixNavigate = () => {
     [replace]
   );
 
+  const navigate = useCallback((href: string) => push(href), [push]);
+
   return {
     goToHome,
     goBack,
     goForward,
     refreshPage,
     replaceHref,
+    navigate,
   };
 };
