@@ -6,7 +6,7 @@ import { MenuSection } from "@/components/molecule";
 
 export default function Home() {
   return (
-    <Container customClass="p-0" align="CENTER">
+    <Container customClass="p-5" align="CENTER">
       <Container
         direction="COL"
         align="CENTER"

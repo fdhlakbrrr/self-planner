@@ -8,7 +8,7 @@ export const useContainer = () => {
       justify: LayoutAlign,
       align: LayoutAlign
     ): string => {
-      let className = "flex gap-5 p-5 box-border ";
+      let className = "flex gap-5 box-border ";
       const concatClassName = (str: string): string => (className += `${str} `);
 
       if (direction === "COL") {
